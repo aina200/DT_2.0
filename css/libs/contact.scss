@@ -1,0 +1,170 @@
+/***** formulaire ******/
+form {
+	overflow:hidden;
+	width: 92%;
+    margin: 0 auto;
+	color: $black;
+}
+::placeholder{
+	color: $black;
+}
+form .part-left {
+	width:50%;
+	float:left;
+}
+form .part-left p {
+	width:45%;
+	float:left;
+}
+form .part-right {
+	width:50%;
+	float:right;
+	margin: 0 0 10px 0;
+}
+form p {
+	padding:0;
+	margin: 15px 2%;
+}
+form input, form textarea {
+    width: 100%;
+    font-family: 'PT Sans Narrow', Arial, Helvetica, sans-serif;
+    background: transparent;
+    border: solid 2px $black;
+    font-size: 1em;
+    padding: 15px 20px ;
+	box-sizing:border-box;
+}
+form textarea {
+	resize:none;
+	height: 238px;
+}
+form textarea.requis, form input.requis {
+    border: solid 1px #d71418;
+}
+#submit {
+	clear:both;
+	margin-bottom:45px;
+}
+#submit button{
+	font-family: 'PT Sans Narrow', Arial, Helvetica, sans-serif;
+	font-size:1em;
+	cursor:pointer;
+}
+#message_erreur_formulaire p {
+	text-align:center;
+	color:#d71418;
+}
+
+
+
+
+/*** Implantation ***/
+#zone-implantation {
+	width:100%;
+	height:646px;
+	position:relative;
+	background-color: #C3C3C3;
+}
+#zone-implantation #output2 {
+	position: absolute;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    height: 646px;
+}
+#output2 li {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+#output2 li div {
+	position:absolute;
+	background:rgba(255,255,255,0.9);
+	width:500px;
+	height:130px;
+	bottom:110px;
+	right:10%;
+	padding: 10px 25px;
+	box-sizing:border-box;
+}
+#output2 li div p {
+	color:#585858;
+	font-size:1.3em;
+	text-transform:uppercase;
+	float:left;
+	text-align:center;
+}
+.picto-location {
+	background:url(../img/svg/picto-location.png) no-repeat center left;
+	padding: 0 10px 0 27px;
+    width: 60%;
+}
+.picto-phone {
+	background:url(../img/svg/picto-phone.png) no-repeat center left;
+	padding: 0 10px 0 40px;
+	width:40%;
+	margin-top: 15px;
+}
+.picto-phone span {
+	font-size:0.8em;
+}
+#zone-implantation #tabs2 {
+	position: absolute;
+    top: 25px;
+	right:5%;
+    z-index: 10;
+	width:50%;
+	display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    -webkit-align-items: center;
+    align-items: center;
+	text-align:center;
+}
+#tabs2 li {
+	width:200px;
+	height:75px;
+}
+#tabs2 li a{
+	width:100%;
+	height:100%;
+	box-sizing: border-box;
+}
+#zone-implantation #carte-wv {
+	// background:url(../img/carte-wv-little.png) no-repeat;
+	width:450px;
+	height:452px;
+	position:relative;
+	top: 90px;
+	left:5%;
+	z-index:10;
+}
+
+#carte-wv li {
+	position:absolute;
+}
+#carte-wv li a {
+	display:block;
+	text-indent:-9999px;
+	opacity:0.8;
+	-webkit-transition: 0.4s;
+}	
+#carte-wv li a:hover, #carte-wv li a.current {
+	opacity:1;
+}	
+div.logo-partenaire {
+	width: 90%;
+    margin: 45px auto;
+    overflow: hidden;
+	text-align:center;
+}
+div.logo-partenaire img {
+	display: inline-block;
+    margin: 20px;
+}
+div.content {
+	margin-top:100px;
+}

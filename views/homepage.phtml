@@ -1,0 +1,24 @@
+<?php
+require './controllers/nav-bar_controller.php';
+?>
+<!-- HEADER  -->
+<header id="homepage">
+	<div class="filtre-video"></div>
+	<video id="video-background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+		<source src="img/videoplayback_" type="video/mp4">
+	</video>
+	<div class="logo reveal"><img src="img/logo-rem.png" alt="Logo de dynasty patrimoine"></div>
+</header>
+
+<!-- REQUIRE OTHERS SECTIONS  -->
+<?php
+require './controllers/nav-bar_controller.php';
+require './controllers/about_controller.php';
+require './controllers/services_controller.php';
+require './controllers/partenaires_controller.php';
+// require './controllers/partenaires-page_controller.php';
+// require './controllers/team_controller.php';
+require './controllers/contact_controller.php';
+require './controllers/footer_controller.php';
+?>
+

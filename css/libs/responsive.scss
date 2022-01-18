@@ -1,0 +1,449 @@
+// MEDIA TELEPHONE 
+@media only screen and  (max-width : 780px) {
+    html,body{
+      overflow-x: hidden;
+    }
+    #barre-menu{
+      display: none;
+    }
+    header{
+      .logo{
+        margin-bottom: 20%;
+        
+        img{
+          width: 75%;
+          height: 169px;
+        }
+      }
+    }
+    // NAVBAR MOBIL 
+    #burger-menu {
+      cursor: pointer;
+      height: 27px;
+      width: 27px;
+      position: fixed;
+      margin-left: 85%;
+      margin-top: 10%;
+      z-index:2;
+      background-color: transparent;
+      display: flex;
+    }
+    #burger-menu span,
+    #burger-menu span:before,
+    #burger-menu span:after {
+      background: $gold;
+      display: block;
+      height: 2px;
+      opacity: 1;
+      position: absolute;
+      transition: 0.3s ease-in-out;
+    }
+    #burger-menu span:before,
+    #burger-menu span:after {
+      content: "";
+    }
+    #burger-menu span {
+      right: 0px;
+      top: 13px;
+      width: 40px;
+    }
+    #burger-menu span:before {
+      left: 0px;
+      top: -10px;
+      width: 40px;
+    }
+    #burger-menu span:after {
+      left: 0px;
+      top: 10px;
+      width: 40px;
+    }
+
+    #burger-menu.close span {
+      transform: rotate(-45deg);
+      top: 13px;
+      width: 40px;
+    }
+    #burger-menu.close span:before {
+      top: 0px;
+      transform: rotate(90deg);
+      width: 40px;
+    }
+    #burger-menu.close span:after {
+      top: 0px;
+      left:0;
+      transform: rotate(90deg);
+      opacity:0;
+      width:0;
+    }
+
+    #menu{
+      top:0;
+      height:0;
+      opacity: 0;
+      text-align:center;
+      transition: all 0.3s ease-in-out;
+      display: none;
+    }
+    #menu.overlay{
+      visibility: visible;
+      opacity: 1;
+      height: 100%;
+      background-color: black;
+      @include element-center;
+      flex-direction: column;
+      position: fixed;
+      z-index: 11;
+    }
+    #menu li{
+      list-style:none;
+    }
+    #menu a{
+      color:#fff;
+      display:block;
+      font-size: 32px;
+      margin-bottom:30px;
+      text-decoration:none;
+    }
+    // ABOUT 
+    section.chiffre-cle {
+      display: none;
+    } 
+    .bg-blue {
+      padding-top: 10%;
+    }
+     .about-txt{
+      width: 95%;
+    } 
+    p.text-bigger {
+      font-size:2.5em;
+      text-align: center;
+    }
+    // SERVICES 
+    h1.line, h2.line {
+      width: 100%;
+    }
+    .container{
+      // flex-direction: row;
+      .card_box{
+        width: 100%;
+        height: 100%;
+        @include element-center;
+        flex-direction: column;
+        
+      }
+      .content{
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+        font-size: 1.3em;
+        line-height: 1.6em;
+      }
+      .content::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+      }
+    }
+  .card{
+    width: 100%;
+    height: 90%;
+  }
+
+  // CAROUSSEL BUTTONS 
+  #prev,
+  #next {
+    display: none;
+  }
+  // PARTNERS
+  .partenaires_mobil{
+    display: flex;
+  }
+  .partenaires_descktop{
+    display: none;
+  }
+  // CONTACT 
+
+  #contact{
+    @include element-center;
+    flex-direction: column;
+  }
+  
+  form {
+    overflow:hidden;
+    width: 100%;
+    margin: auto;
+    color: $black;
+  }
+  form .part-left {
+    width:90%;
+    float:right;
+  }
+  form .part-left p {
+    width:95%;
+    float:center;
+  }
+  form .part-right {
+    width:90%;
+    float:center;
+  }
+  form p {
+    padding:0;
+    margin: 15px 2%;
+  }
+  form input, form textarea {
+    width: 90%;
+    padding: 15px 20px;
+  }
+
+  // FOOTER 
+  footer .info-wv {
+    background:url(../img/logo-wv-300-150.png) no-repeat center top;
+    width: 100%;
+  }
+  ul.nav-footer {
+    float:center;
+    @include element-center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  ul.nav-footer li {
+    margin-top: 3%;
+  }
+  #trigger-overlay{
+    display: block;
+
+  }
+}
+
+/* TABLETES */
+@media only screen and (min-width : 768px) and (max-width : 1224px) {
+
+  html,body{
+    overflow-x: hidden;
+    font-size: 20px;
+  }
+  ::placeholder{
+    font-size: 20px;
+  }
+
+  #barre-menu{
+    display: none;
+  }
+  header{
+    .logo{
+      margin-bottom: 20%;
+      
+      img{
+        width: 75%;
+        height: 300px;
+      }
+    }
+  }
+  // NAVBAR MOBIL 
+  #burger-menu {
+    cursor: pointer;
+    height: 27px;
+    width: 27px;
+    position: fixed;
+    margin-left: 85%;
+    margin-top: 10%;
+    z-index:2;
+    background-color: transparent;
+    display: flex;
+  }
+  #burger-menu span,
+  #burger-menu span:before,
+  #burger-menu span:after {
+    background: $gold;
+    display: block;
+    height: 2px;
+    opacity: 1;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+  }
+  #burger-menu span:before,
+  #burger-menu span:after {
+    content: "";
+  }
+  #burger-menu span {
+    right: 0px;
+    top: 13px;
+    width: 50px;
+  }
+  #burger-menu span:before {
+    left: 0px;
+    top: -10px;
+    width: 50px;
+  }
+  #burger-menu span:after {
+    left: 0px;
+    top: 10px;
+    width: 50px;
+  }
+
+  #burger-menu.close span {
+    transform: rotate(-45deg);
+    top: 13px;
+    width: 40px;
+  }
+  #burger-menu.close span:before {
+    top: 0px;
+    transform: rotate(90deg);
+    width: 40px;
+  }
+  #burger-menu.close span:after {
+    top: 0px;
+    left:0;
+    transform: rotate(90deg);
+    opacity:0;
+    width:0;
+  }
+
+  #menu{
+    top:0;
+    height:0;
+    opacity: 0;
+    text-align:center;
+    transition: all 0.3s ease-in-out;
+    display: none;
+  }
+  #menu.overlay{
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
+    background-color: black;
+    @include element-center;
+    flex-direction: column;
+    position: fixed;
+    z-index: 11;
+  }
+  #menu li{
+    list-style:none;
+  }
+  #menu a{
+    color:#fff;
+    display:block;
+    font-size: 32px;
+    margin-bottom:30px;
+    text-decoration:none;
+  }
+  // ABOUT 
+  section.chiffre-cle {
+    display: none;
+  } 
+  .bg-blue {
+    padding-top: 10%;
+  }
+   .about-txt{
+    width: 95%;
+  } 
+  p.text-bigger {
+    font-size:2.5em;
+    text-align: center;
+  }
+  // SERVICES 
+  h1.line, h2.line {
+    width: 100%;
+  }
+  .container{
+    flex-direction: column;
+    .card_box{
+      width: 100%;
+      height: 100%;
+      @include element-center;
+      flex-direction: column;
+      
+    }
+    .content{
+      position: relative;
+      height: 100%;
+      overflow: hidden;
+      font-size: 1.3em;
+      line-height: 1.6em;
+    }
+    .content::before{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+    }
+  }
+.card{
+  height: 100%;
+  width: 80%;
+}
+
+
+// CAROUSSEL BUTTONS 
+#prev,
+#next {
+  display: none;
+}
+// PARTNERS
+.partenaires_mobil{
+  display: flex;
+}
+.partenaires_descktop{
+  display: none;
+}
+// CONTACT 
+
+#contact{
+  @include element-center;
+  flex-direction: column;
+}
+
+form {
+  overflow:hidden;
+  width: 100%;
+  margin: auto;
+  color: $black;
+}
+form .part-left {
+  width:90%;
+  float:right;
+}
+form .part-left p {
+  width:95%;
+  float:center;
+}
+form .part-right {
+  width:90%;
+  float:center;
+}
+form p {
+  padding:0;
+  margin: 15px 2%;
+}
+form input, form textarea {
+  width: 90%;
+  padding: 15px 20px;
+}
+
+// FOOTER 
+footer .info-wv {
+  background:url(../img/logo-wv-300-150.png) no-repeat center top;
+  width: 100%;
+}
+ul.nav-footer {
+  float:center;
+  @include element-center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+ul.nav-footer li {
+  margin-top: 3%;
+}
+#trigger-overlay{
+  display: block;
+
+}
+
+
+}
+

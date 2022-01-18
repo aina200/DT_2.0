@@ -1,0 +1,65 @@
+<!-- Carte -->
+<section style="padding-bottom:0;" id="contact">
+		<article>
+			<h2 class="line reveal"><span>Nous contacter</span></h2>
+			<form method="POST" action="#formContact" id="formContact">
+			<span class='formErrors'><?php if(isset($errors)){echo $errors;}?></span>
+				<div class="part-left">
+					<p>
+						<input type="text" name="lastName" id="nom" placeholder="Nom" required class="texte obligatoire reveal" onFocus="if(this.placeholder=='Nom'){this.placeholder='';}" onBlur="if(this.placeholder==''){this.placeholder='Nom';}" value="<?php if(isset ($errors)){echo htmlspecialchars($_POST['lastName']);}?>">
+					</p>
+					<p>
+						<input type="text" name="firstName" id="firstName" placeholder="Prénom" required class="texte obligatoire reveal" onFocus="if(this.placeholder=='Prénom'){this.placeholder='';}" onBlur="if(this.placeholder==''){this.placeholder='Prénom';}" value="<?php if(isset ($errors)){echo htmlspecialchars($_POST['firstName']);}?>">
+					</p>
+					<p>
+						<input type="number" name="index" id="codePostal" placeholder="Code Postal" required class="texte obligatoire reveal" onFocus="if(this.placeholder=='Code Postal'){this.placeholder='';}" onBlur="if(this.placeholder==''){this.placeholder='Code Postal';}" value="<?php if(isset ($errors)){echo htmlspecialchars($_POST['index']);}?>">
+					</p>
+					<p>
+						<input type="text" name="city" id="ville" placeholder="Ville" required class="texte obligatoire reveal" onFocus="if(this.placeholder=='Ville'){this.placeholder='';}" onBlur="if(this.placeholder==''){this.placeholder='Ville';}" value="<?php if(isset ($errors)){echo htmlspecialchars($_POST['city']);}?>">
+					</p>
+					<p>
+						<input type="number" name="tel" id="telephone" placeholder="Téléphone*" required class="texte obligatoire reveal" onFocus="if(this.placeholder=='Téléphone*'){this.placeholder='';}" onBlur="if(this.placeholder==''){this.placeholder='Téléphone*';}" value="<?php if(isset ($errors)){echo htmlspecialchars($_POST['tel']);}?>">
+					</p>
+					<p>
+						<input type="email" name="email" id="email" placeholder="Email*"  required class="mail obligatoire reveal" onFocus="if(this.placeholder=='Email*'){this.placeholder='';}" onBlur="if(this.placeholder==''){this.placeholder='Email*';}" value="<?php if(isset ($errors)){echo htmlspecialchars($_POST['email']);}?>">
+					</p>
+				</div>
+				<div class="part-right">
+					<p><textarea placeholder ="Votre message..." name="message" id="message" required class="texte obligatoire reveal" onFocus="if(this.placeholder=='Votre message...'){this.placeholder='';}" onBlur="if(this.placeholder==''){this.placeholder='Votre message...';}"><?php if(isset ($errors)){echo htmlspecialchars($_POST['message']);}?></textarea></p>
+				</div>
+				<p id="submit">
+				<button type="submit" name="contact" class="button bt-blue reveal" value="Envoyer votre message">Envoyer votre message</button></p>
+			</form>
+		</article>
+
+	</section>
+
+<!-- CONTACT OFFICE  -->
+<!-- <article>
+	<h2 class="line reveal"><span>Notre implantation</span></h2>
+	<div id="zone-implantation">
+		<ul id="carte-wv">
+		</ul>
+		<ul id="tabs2">
+		<li>
+			<a href="javascript:;" onclick="mapNantesChanges()"  class="button bt-blue reveal" id="bt-nantes">
+				Notre siège social<br/> à Nantes
+			</a>
+		</li>
+		<li>
+			<a href="javascript:;" onclick="mapParisChanges()" class="button bt-blue reveal" id="bt-paris">
+				Notre cabinet<br/> à Paris
+			</a>
+		</li>
+
+		</ul>
+		<ul id="output2">
+			<li class="map-nantes">
+				<div>
+					<p class="picto-location reveal" style="margin-top: 1.5em;">Arthur Geidel<br/>44000 Nantes</p>
+					<p class="picto-phone reveal" style="margin-top: 1.5em;">07 86 90 27 56<br /><span>____________________</span></p>
+				</div>
+			</li>
+		</ul>
+	</div>
+</article> -->

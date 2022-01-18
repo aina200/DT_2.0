@@ -1,0 +1,175 @@
+.services_line{
+  padding-top: 5%;
+}
+// #wrapper {
+//   width: 100%;
+//   height: 50%;
+//   position: relative;
+//   padding-top: 5%;
+  
+  // #carousel {
+  //   overflow-x: auto;
+  //   overflow-y: hidden;
+  //   scroll-behavior: smooth;
+  //   scrollbar-width: none;
+  // }
+  // #carousel::-webkit-scrollbar {
+  //   height: 0;
+  // }
+//   #content {
+//     display: grid;
+//     grid-gap: 16px;
+//     grid-auto-flow: column;
+//     margin: auto;
+//     box-sizing: border-box;
+//     margin-left: 1%;
+//   }
+// }
+.container{
+  @include element-center;
+  flex-direction: column;  
+
+  .content{
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    font-size: 1.3em;
+    line-height: 1.6em;
+  }
+  .content::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+  }
+}
+.card_box{
+  width: 100%;
+  height: 100%;
+  @include element-center;
+  
+}
+.card{
+  @include element-center;
+  flex-direction: column;
+  position: relative;
+  width: 35%;
+  height: 700px;
+  padding: 20px;
+  margin: 20px;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  -webkit-box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  position: relative;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+
+  h3{
+    margin-top: 15%;
+    line-height: 1.2em;
+  }
+
+  .icon{
+    @include element-center;
+    flex-direction: column;
+  }
+}
+
+.card::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top:20px solid red;
+  border-right:20px solid red;
+  border:20px solid transparent;
+}
+.more::before{
+  content: "";
+}
+.active .content{
+  height: 100%;
+  transition: all 1.5s  ease-in-out;
+}
+
+
+// CAROUSSEL BUTTONS 
+#prev,
+#next {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background: white;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  outline: 0;
+  cursor: pointer;
+  position: absolute;
+}
+#prev {
+  top: 50%;
+  left: 0;
+  transform: translate(50%, -50%);
+  display: none;
+  border: $blue 2px solid;
+}
+#next {
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+  border: $blue 2px solid;
+}
+// LEARN MORE BUTTONS 
+.button__holder{
+  position: relative;
+  width: 30%;
+  height: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: transparent;
+  margin-bottom: 5%;
+  margin-top: 5%;
+
+  &:after{
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 0; right: 0; bottom: 0; left: 0;
+  }
+}
+.plus{
+  position: relative;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  background: $blue;
+  border-radius: 50%;
+  border: none;
+  transition: box-shadow 400ms cubic-bezier(.2,0,.7,1), transform 200ms cubic-bezier(.2,0,.7,1);
+  cursor: pointer;
+
+  &:after{
+    content: "+";
+    color: white;
+    font-size: 2.5em;
+    line-height: 1.1em;
+  }
+  &:hover{
+    transform: rotate(45deg);
+    box-shadow: 0 0 1px 15px rgba(white, 0.4),
+    0 0 1px 30px rgba(white, 0.1),
+    0 0 1px 45px rgba(white, 0.1);
+  }
+}
